@@ -1,0 +1,46 @@
+@import "../app//globals";
+
+.header {
+  color: $primary;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    li {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.navLink {
+  color: $secondary;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  &:hover {
+    border-bottom: 3px solid $primary;
+  }
+}
+
+.navCta {
+  background-color: $primary;
+  color: $secondary;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+}

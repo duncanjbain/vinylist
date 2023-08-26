@@ -1,23 +1,43 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-* {
-  margin: 0;
-}
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-input, button, textarea, select {
-  font: inherit;
-}
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-#root, #__next {
-  isolation: isolate;
-}
+$primary: #ec354d;
+$secondary: #d5ece9;
+$dark: #242c30;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
